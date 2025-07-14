@@ -1,0 +1,36 @@
+.highlight {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-item img {
+    height: 700px;
+}
+
+.video-jumbo {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 78px);
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.valore-card {
+    transition: transform 0.3s ease;
+}
+.valore-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}

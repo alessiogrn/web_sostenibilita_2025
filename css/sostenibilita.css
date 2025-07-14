@@ -1,0 +1,27 @@
+.jumbo-container {
+    background-image: url("../img/jumbo_sostenibilita.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.card {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
+
+.card-img {
+    max-height: 200px;
+    object-fit: contain;
+}
