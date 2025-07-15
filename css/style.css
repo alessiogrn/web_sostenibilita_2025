@@ -49,6 +49,29 @@ body {
     display: none;
 }
 
+.green-section {
+    background-color: #d9f0e2;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #108c47;
+    transition: background-color 0.5s linear;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #ff4500, #ffa500);
+}
+
+.esg-icon {
+    font-size: 5rem;
+}
+
 @media (max-width: 991.98px) {
     .navbar-collapse {
         position: fixed;
