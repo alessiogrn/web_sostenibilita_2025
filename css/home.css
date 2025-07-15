@@ -1,6 +1,7 @@
 .highlight {
     font-size: 2.5rem;
     font-weight: bold;
+    color: #108c47;
 }
 
 .carousel-item img {
@@ -30,6 +31,7 @@
 .valore-card {
     transition: transform 0.3s ease;
 }
+
 .valore-card:hover {
     transform: translateY(-5px);
     cursor: pointer;
