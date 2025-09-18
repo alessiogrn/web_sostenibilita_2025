@@ -1,0 +1,23 @@
+:root {
+    --bg-black: #000;
+    --bg-gray-transparent: rgba(255, 255, 255, 0.1);
+    --gradient-orange: linear-gradient(to right, #ff4500, #ffa500);
+
+    --border-green-card: #b7e4c7;
+
+
+    --text-white: #f2f2f2;
+    --text-black: #000000;
+    --text-green: #1B4332;
+
+    --navbar-height: 60px;
+    --navbar-mobile-height: 80px;
+
+    --bg-navbar: rgba(0, 255, 128, 0.15);
+    --navbar-blur: blur(80px);
+
+    --bg-navbar-border: rgba(0, 255, 128, 0.30);
+
+    --bg-card: #F1F5F2;
+    --bg-light-green: #d9f0e2;
+}

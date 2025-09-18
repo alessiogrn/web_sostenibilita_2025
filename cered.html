@@ -1,0 +1,788 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contatti - Azienda Verde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+    <style>
+
+        .jumbo-container {
+            background-image: url("desck.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(226, 232, 230);
+            text-transform: uppercase;
+        }
+
+        .jambo-container {
+            background-image: url("top.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(160, 245, 216);
+            text-transform: uppercase;
+
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #e6f4ea, #f4f9f4);
+            color: #2d6a4f;
+        }
+
+        header {
+            background-color: #40916c;
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .form-box, .info-box {
+            flex: 1 1 350px;
+            background: #ffffffee;
+            border-radius: 14px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            border: 2px solid #b7e4c7;
+        }
+
+        .form-box h2, .info-box h3 {
+            text-align: center;
+            color: #1b4332;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        input, textarea, select {
+            padding: 0.9rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.9rem;
+            background-color: #2d6a4f;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1b4332;
+        }
+
+        .info-box i {
+            color: #1b4332;
+            font-size: 1.3rem; /* ← aumentato */
+            margin-right: 0.6rem;
+
+        }
+
+        .info-box p {
+            background-color: #ebfbee;
+            padding: 0.6rem 1rem;
+            border-radius: 12px;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+        }
+
+        .map-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* TEAM SECTION */
+        .team-section {
+            max-width: 1200px;
+            margin: 4rem auto 2rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .team-section h2 {
+            color: #1b4332;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: #ffffff;
+            border: 2px solid #b7e4c7;
+            border-radius: 16px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+            width: 260px;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: scale(1.03);
+        }
+
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .team-card h4 {
+            margin: 0.5rem 0 0.2rem;
+            color: #2d6a4f;
+        }
+
+        .team-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* NEWSLETTER */
+        .newsletter {
+            max-width: 800px;
+            margin: 3rem auto;
+            background-color: #e6f4ea;
+            border: 2px solid #95d5b2;
+            padding: 2rem;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .newsletter h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #2d6a4f;
+        }
+
+        .newsletter p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 0.8rem;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-left: 150px;
+
+        }
+
+
+        .newsletter button {
+            padding: 0.9rem 1.6rem;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, #52b788, #2d6a4f);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+            margin-left: 320px;
+
+            width: 160px;
+        }
+
+        .newsletter button:hover {
+            background: linear-gradient(135deg, #40916c, #1b4332);
+            transform: scale(1.05);
+        }
+
+        /* SOCIAL ICONS */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            font-size: 1.6rem;
+            color: #2d6a4f;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #52b788;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2d6a4f;
+            color: white;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .newsletter input[type="email"] {
+                width: 100%;
+                margin-bottom: 0.8rem;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+
+            .team-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+        .diamond-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            justify-items: center;
+            align-items: center;
+            margin: 3rem auto;
+            max-width: 900px;
+        }
+
+        .diamond-item {
+            width: 200px;
+            height: 200px;
+            transform: rotate(45deg);
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .diamond-item:hover {
+            transform: rotate(45deg) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .diamond-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(-45deg) scale(1.1);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+
+
+        .contact-map-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+
+        .map-info {
+            text-align: left;
+            font-size: 1rem;
+            color: #333;
+            background-color: #e9f5ee;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #f1f5f2;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #1b4332;
+            margin-bottom: 1rem;
+        }
+
+        .faq-section {
+            margin-bottom: -13px;
+        }
+
+        .faq-section, .career-section {
+            background: #e6f4ea;
+            padding: 3rem 1rem;
+            border-top: 2px solid #a3c9a8;
+            border-bottom: 2px solid #a3c9a8;
+            font-family: 'Roboto', sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-section h2, .career-section h2 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .faq-item label {
+            display: block;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .faq-item label::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item input:checked + label::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding-left: 1.5rem;
+            color: #444;
+        }
+
+        .faq-item input:checked + label + .faq-content {
+            max-height: 200px;
+            margin-top: 0.5rem;
+        }
+
+        .career-section p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .career-form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .career-form input, .career-form textarea {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: 'Roboto', sans-serif;
+            resize: none;
+        }
+
+        .career-form button {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .career-form button:hover {
+            background-color: #40916c;
+        }
+
+        .info-section {
+            background: linear-gradient(to right, #e8f5e9, #f1fdf4);
+            padding: 60px 20px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-section h2 {
+            font-size: 2.2rem;
+            color: #1b4332;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .info-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+        }
+
+        .info-box {
+            background-color: #ffffffdd;
+            padding: 20px;
+            border-radius: 12px;
+            width: 260px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-box i {
+            font-size: 2rem;
+            color: #2d6a4f;
+            margin-bottom: 0.5rem;
+            animation: bounce 1.8s infinite;
+        }
+
+        .info-box h4 {
+            font-size: 1.1rem;
+            color: #1b4332;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            font-size: 0.9rem;
+            color: #2d6a4f;
+        }
+
+        /* Animazione semplice */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+
+        .jambo-container {
+            background-image: url("top.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(226, 232, 230);
+            text-transform: uppercase;
+
+        }
+
+        .img1 {
+
+            margin-top: 13px;
+            margin-left: 613px;
+
+        }
+
+
+        .feres {
+            height: 100px; /* Spessore della linea */
+            width: 100%; /* Larghezza: tutta la pagina */
+            background-color: white; /* Colore della linea */
+            margin: 0; /* Spazio sopra e sotto */
+            border-radius: 3px; /* Arrotondamento opzionale */
+        }
+
+
+    </style>
+</head>
+
+
+</main>
+<header>
+    <h1>Contattaci</h1>
+    <p>Per richieste, collaborazioni o semplici curiosità</p>
+</header>
+
+<section class="contact-wrapper">
+
+    <div class="form-box">
+        <h2><i class="fas fa-envelope-open-text"></i> Invia un Messaggio</h2>
+        <form>
+            <input type="text" name="nome" placeholder="Nome e Cognome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="telefono" placeholder="Telefono (10 cifre)" pattern="[0-9]{10}">
+            <input type="text" name="localita" placeholder="Località">
+            <select name="motivazione" required>
+                <option value="">Seleziona motivo del contatto</option>
+                <option value="info">Richiesta Informazioni</option>
+                <option value="collaborazione">Proposta di Collaborazione</option>
+                <option value="altro">Altro</option>
+            </select>
+            <textarea rows="4" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
+
+            <div class="checkbox-group">
+                <input type="checkbox" required/>
+                <label>Acconsento al trattamento dei dati personali <span class="required">*</span></label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox"/>
+                <label>Autorizzo il contatto via email e telefono</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox"/>
+                <label>Desidero ricevere aggiornamenti sui progetti sostenibili</label>
+            </div>
+
+
+            <button type="submit">Invia</button>
+        </form>
+    </div>
+
+
+    <div class="info-box">
+
+
+        <h2>Informazioni Utili</h2>
+        <div class="info-boxes">
+            <div class="info-box">
+                <i class="fas fa-user-clock"></i>
+                <h4>Orari di Apertura</h4>
+                <p>Lunedì - Venerdì: 8:00 - 18:00<br>Sabato: 9:00 - 13:00</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-envelope-open-text"></i>
+                <h4>Email Diretta</h4>
+                <p>supporto@acciaierievenete.it<br>hr@acciaierievenete.it</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-industry"></i>
+                <h4>Settori Operativi</h4>
+                <p>Produzione acciaio, Ricerca & Sviluppo, Innovazione sostenibile</p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<!--
+<section class="diamond-gallery">
+  <div class="diamond-item">
+    <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=400&q=80" alt="Ambiente verde">
+  </div>
+  <div class="diamond-item">
+    <img src="https://images.unsplash.com/photo-1526407878324-08a0e73a7491?auto=format&fit=crop&w=400&q=80" alt="Energia solare">
+  </div>
+  <div class="diamond-item">
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Riciclo e sostenibilità">
+  </div>
+</section>
+-->
+
+<section class="contact-map">
+    <h2>Dove Ci Trovi</h2>
+    <div class="contact-map-content">
+        <div class="map-info">
+            <p>📍 <strong>Via dell'Acciaio, 25</strong> – Padova (PD)</p>
+            <p>📞 <strong>+39 049 1234567</strong></p>
+            <p>📧 <strong>info@acciaierievenete.com</strong></p>
+        </div>
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.812977!2d11.8825!3d45.4064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDUuNDA2NCwgMTEuODgyNQ!5e0!3m2!1sit!2sit!4v1234567890"
+                width="100%"
+                height="250"
+                style="border-radius: 12px; border: none;"
+                allowfullscreen=""
+                loading="lazy"
+        ></iframe>
+    </div>
+</section>
+
+
+<div class="feres">
+
+</div>
+<section class="">
+    <h1></h1>
+</section>
+
+
+<div class="feres">
+
+</div>
+
+
+<!--
+TEAM 
+
+<section class="team-section">
+  <h2>Il Nostro Team</h2>
+  <div class="team-cards">
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team member">
+      <h4>Elisa Rossi</h4>
+      <p>Responsabile Sostenibilità</p>
+    </div>
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team member">
+      <h4>Marco Bianchi</h4>
+      <p>Ingegnere Ambientale</p>
+    </div>
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team member">
+      <h4>Sara Verdi</h4>
+      <p>Comunicazione & CSR</p>
+    </div>
+  </div>
+
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</section>
+
+-->
+
+
+<section class="faq-section">
+    <h2><i class="fas fa-question-circle"></i> Domande Frequenti (FAQ)</h2>
+    <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label for="faq1">Qual è la vostra missione ambientale?</label>
+        <div class="faq-content">
+            Miriamo a ridurre l’impatto ambientale producendo acciaio di alta qualità con tecnologie sostenibili.
+        </div>
+    </div>
+    <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label for="faq2">Posso visitare i vostri impianti?</label>
+        <div class="faq-content">
+            Sì, organizziamo visite guidate su richiesta, specialmente per scuole e università.
+        </div>
+    </div>
+    <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label for="faq3">Come posso collaborare con voi?</label>
+        <div class="faq-content">
+            Contattaci tramite il modulo o scrivici per iniziative congiunte e progetti ambientali.
+        </div>
+    </div>
+</section>
+
+<section class="career-section">
+    <h2><i class="fas fa-briefcase"></i> Lavora con Noi</h2>
+    <p>Crediamo nel talento e nella passione per l’ambiente. Compila il form per inviarci la tua candidatura!</p>
+    <form class="career-form">
+        <input type="text" placeholder="Nome e Cognome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Ruolo desiderato" required>
+        <textarea placeholder="Scrivi una breve presentazione" rows="4" required></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Invia Candidatura</button>
+    </form>
+</section>
+
+
+NEWSLETTER
+<section class="newsletter">
+    <h3><i class="fas fa-paper-plane"></i> Iscriviti alla nostra Newsletter</h3>
+    <p>Ricevi aggiornamenti su progetti green, innovazione e sostenibilità</p>
+    <form>
+        <input type="email" name="newsletter-email" placeholder="Inserisci la tua email" required>
+        <button type="submit">Iscriviti</button>
+    </form>
+</section>
+
+
+<footer>
+    &copy; 2025 Azienda Verde – Tutti i diritti riservati
+</footer>
+
+</body>
+
+</html>

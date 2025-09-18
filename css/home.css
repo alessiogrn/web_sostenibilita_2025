@@ -1,38 +1,38 @@
 .highlight {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #108c47;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-green);
 }
 
-.carousel-item img {
-    height: 700px;
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--text-green);
 }
 
+h5,
+h4 {
+  font-weight: bold;
+}
+
+/* Posizionamenoto video */
 .video-jumbo {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 78px);
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .video-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-.valore-card {
-    transition: transform 0.3s ease;
-}
-
-.valore-card:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 }

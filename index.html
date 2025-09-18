@@ -1,187 +1,230 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acciaierie Pugliesi - Home</title>
+    <!-- Titolo principale della pagina / nome dell'azienda -->
+    <title>Acciaierie Venete - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-            <div class="container-lg">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="img/logo.png" alt="Logo" class="logo me-2">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto text-center">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link " href="sostenibilita.html">Sostenibilità</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <main class="flex-grow-1">
-        <section class="video-jumbo">
-            <video autoplay muted loop playsinline class="video-background">
-                <source src="img/intro_home.mp4" type="video/mp4">
-            </video>
+<!-- NavBar della pagina -->
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-lg">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <!-- Logo dependable: immagine rappresentativa posizionata nella parte superiore della pagina -->
+                <img src="img/logo.png" alt="Logo" class="logo me-2">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="sostenibilita.html">Sostenibilità</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Sezione Home: Video -->
+<main class="flex-grow-1">
+    <section class="video-jumbo">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="img/intro_home.mp4" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+    </section>
+
+    <!-- INTRODUZIONE - Presentazione dell'impresa -->
+    <div class="container">
+        <section class="introduction-container py-5">
+            <h1 class="display-4">
+                Fare acciaio dal 1957
+            </h1>
+            <p class="lead mt-4 text-center pt-3">
+                Acciaierie Venete inizia a produrre acciaio nel 1957 operando nel campo delle commodities: lingotti,
+                billette e quindi tondo per cemento armato. Agli inizi degli anni ’80 l’azienda avvia un processo di
+                trasformazione verso gli acciai lunghi di qualità; un processo che l’ha portata ad essere oggi uno tra i
+                più qualificati produttori nel mercato europeo degli Engineering Steel.
+                Il percorso di crescita si è sviluppato per linee sia interne (investendo in risorse umane, tecnologie,
+                processi e prodotti) che esterne (acquisendo nel 2003 gli stabilimenti di Sarezzo, Mura e Dolcè e nel
+                2018 gli stabilimenti di Borgo Valsugana e Odolo).
+            </p>
         </section>
 
-        <section class="story-section p-5">
-            <div class="container">
-                <h1 class="display-4 text-center">
-                    Fare acciaio dal 1957
-                </h1>
-                <p class="lead mt-4 text-center p-3">
-                    Acciaierie Venete inizia a produrre acciaio nel 1957 operando nel campo delle commodities: lingotti, billette e quindi tondo per cemento armato. Agli inizi degli anni ’80 l’azienda avvia un processo di trasformazione verso gli acciai lunghi di qualità; un processo che l’ha portata ad essere oggi uno tra i più qualificati produttori nel mercato europeo degli Engineering Steel.
-                    Il percorso di crescita si è sviluppato per linee sia interne (investendo in risorse umane, tecnologie, processi e prodotti) che esterne (acquisendo nel 2003 gli stabilimenti di Sarezzo, Mura e Dolcè e nel 2018 gli stabilimenti di Borgo Valsugana e Odolo).
+        <!-- CARD RECAP -->
+        <section class="row py-4 p-3 justify-content-around">
+            <div class="col-md-5 acc-card card-moving p-3 text-center d-flex flex-column justify-content-around">
+                <h3 class="highlight">
+                    2 mln ton / anno
+                </h3>
+                <p>
+                    Acciaierie Venete produce circa 2 milioni di tonnellate di acciaio all'anno in diversi
+                    stabilimenti in Italia. I suoi prodotti sono destinati ai settori automotive, energia, meccanica e costruzioni.
                 </p>
+            </div>
 
-                <div class="row text-center p-3">
-                    <div class="col-md-6 mb-4">
-                        <div class="card shadow-lg">
-                            <div class="card-body">
-                                <h3 class="highlight">
-                                    2 mln ton / anno
-                                </h3>
-                                <p>
-                                    Acciaierie Venete produce circa 2 milioni di tonnellate di acciaio all'anno in diversi stabilimenti in Italia. I suoi prodotti sono destinati ai settori automotive, macchine movimento terra, energia, meccanica e costruzioni.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="card shadow-lg">
-                            <div class="card-body">
-                                <h3 class="highlight">
-                                    1400 collaboratori
-                                </h3>
-                                <p>
-                                    Acciaierie Venete impiega circa 1400 dipendenti e produce un’ampia gamma di acciai destinati ai grandi marchi industriali mondiali, grazie a una rete commerciale solida e diversificata.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-5 acc-card card-moving p-3 text-center d-flex flex-column justify-content-around mt-5 mt-md-0">
+                <h3 class="highlight">
+                    1400 collaboratori
+                </h3>
+                <p>
+                    Acciaierie Venete impiega circa 1400 dipendenti e produce un’ampia gamma di acciai
+                    destinati ai grandi marchi industriali mondiali, grazie a una rete commerciale solida e
+                    diversificata.
+                </p>
             </div>
         </section>
 
-        <div class="container p-5">
-            <h2 class="text-center mb-5">
-                Ambito ESG
-            </h2>
-            <div class="d-flex justify-content-around">
-                <div class="d-flex flex-column text-center">
-                    <span class="esg-icon">🌿</span>
-                    Ambiente
-                </div>
-                <div class="d-flex flex-column text-center">
-                    <span class="esg-icon">🤝</span>
-                    Sociale
-                </div>
-                <div class="d-flex flex-column text-center">
-                    <span class="esg-icon">🏛️</span>
-                    Governance
-                </div>
-            </div>
-        </div>
+    </div>
 
-        <div class="container p-5 text-center green-section">
-            <h2>Vuoi saperne di più?</h2>
-            <p>Scopri tutte le nostre iniziative legate alla sostenibilità aziendale</p>
-            <a href="sostenibilita.html" class="cta-button">Clicca qui</a>
-        </div>
+    <!-- INDIRIZZAMENTO REPORT-->
+    <section class="cta-section my-5 py-5 px-3">
+        <h2>Vuoi saperne di più?</h2>
+        <p>Scopri le nostre iniziative legate alla sostenibilità aziendale.</p>
+        <a href="file:///C:/Users/aless/Downloads/web_sostenibilita_2025-main/sostenibilita.html"
+           class="acc-button mt-2 mb-3" target="_blank">
+            Clicca qui
+        </a>
+    </section>
 
 
-        <div class="container-md py-5">
-            <h2 class="text-center mb-5">
-                I Nostri Valori
-            </h2>
+
+    <section>
+
+    </section>
+
+
+
+
+
+
+    <div class="row py-5 container">
+        <div class="container-md pt-5">
+            <h2 class="text-center mb-5">I Nostri Valori</h2>
             <div class="row g-4">
 
                 <!-- Spirito di squadra -->
                 <div class="col-md-4">
-                    <div class="card valore-card h-100">
+                    <div class="card h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">Spirito di squadra</h5>
-                            <p class="card-text">Lo spirito di squadra è la nostra strategia per fare meta: per arrivare alla vittoria non si può giocare da soli. Il “noi” viene prima di tutto.</p>
+                            <p class="card-text">Lo spirito di squadra è la nostra strategia per fare meta: per
+                                arrivare alla vittoria non si può giocare da soli. Il “noi” viene prima di
+                                tutto.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Passione -->
                 <div class="col-md-4">
-                    <div class="card valore-card h-100">
+                    <div class="card h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">Passione</h5>
-                            <p class="card-text">Per noi passione vuol dire metterci il cuore in ogni passaggio e lavorazione, puntando a qualità e innovazione.</p>
+                            <p class="card-text">Per noi passione vuol dire metterci il cuore in ogni passaggio
+                                e lavorazione, puntando a qualità e innovazione.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sviluppo -->
                 <div class="col-md-4">
-                    <div class="card valore-card h-100">
+                    <div class="card h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">Sviluppo</h5>
-                            <p class="card-text">Innoviamo costantemente per costruire un futuro migliore, garantendo crescita e sviluppo sostenibile.</p>
+                            <p class="card-text">Innoviamo costantemente per costruire un futuro migliore,
+                                garantendo crescita e sviluppo sostenibile.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sicurezza -->
                 <div class="col-md-4">
-                    <div class="card valore-card h-100">
+                    <div class="card h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">Sicurezza</h5>
-                            <p class="card-text">La formazione del personale e i controlli garantiscono sicurezza per i dipendenti e per le comunità che ospitano i nostri impianti.</p>
+                            <p class="card-text">La formazione del personale e i controlli garantiscono
+                                sicurezza per i dipendenti e per le comunità che ospitano i nostri impianti.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Affidabilità -->
                 <div class="col-md-4">
-                    <div class="card valore-card h-100">
+                    <div class="card h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">Affidabilità</h5>
-                            <p class="card-text">Qualità, serietà e solidità sono i pilastri che ci permettono di meritare la fiducia di clienti, fornitori e partner.</p>
+                            <p class="card-text">Qualità, serietà e solidità sono i pilastri che ci permettono
+                                di meritare la fiducia di clienti, fornitori e partner.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sostenibilità -->
                 <div class="col-md-4">
-                    <div class="card valore-card h-100">
+                    <div class="card h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">Sostenibilità</h5>
-                            <p class="card-text">Lottiamo contro il cambiamento climatico sviluppando soluzioni per ridurre le emissioni e favorire l’economia circolare.</p>
+                            <p class="card-text">Lottiamo contro il cambiamento climatico sviluppando soluzioni
+                                per ridurre le emissioni e favorire l’economia circolare.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
+    </div>
 
 
 
-    </main>
 
-    <footer class="bg-black text-white text-center py-3 mt-auto">
-        <div class="d-flex justify-content-center align-items-center">
-            <img src="img/logo.png" alt="Logo" class="logo me-2">
+
+
+
+</main>
+
+<!-- Footer della pagina -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Acciaierie Venete</h3>
+            <p>Leader nella produzione di acciai speciali, con impegno verso l’innovazione sostenibile e la
+                responsabilità sociale.</p>
         </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="footer-links">
+            <h4>Collegamenti rapidi</h4>
+            <ul>
+                <li><a href="file:///C:/Users/aless/Downloads/web_sostenibilita_2025-main/chisiamo.html">Chi siamo</a>
+                </li>
+                <li><a href="file:///C:/Users/aless/Downloads/web_sostenibilita_2025-main/sostenibilita.html">Sostenibilità</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contatti</h4>
+            <p>📍 Via dell'Acciaio, 25 - Padova (PD)</p>
+            <p>📞 +39 049 1234567</p>
+            <p>📧 info@acciaierievenete.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Acciaierie Venete – Tutti i diritti riservati | <a href="#">Privacy Policy</a></p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

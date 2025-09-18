@@ -1,78 +1,109 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
+.acc-card {
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    border: 2px solid var(--border-green-card);
+    background-color: var(--bg-card);
+}
+
+.card-moving {
+    transition: transform 0.3s ease;
+}
+
+.card-moving:hover {
+    transform: translateY(-10px);
+}
+
+.cta-section {
+    background-color: var(--bg-light-green);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+
+    background: linear-gradient(to right, #ff4500, #ffa500);
+    -webkit-background-clip: text;   /* necessario per Safari/Chrome */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;           /* per gli altri browser */
+    color: transparent;
+}
+
+.cta-section p {
+    font-size: 1.07rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.acc-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #108c47;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.acc-button:hover {
+    background-color: #0a6d35;
+}
+
+
+/* --- s.navbar --- */
 .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 0; left: 0; width: 100%;
     z-index: 10000;
-    height: 80px;
-}
-
-main {
-    padding-top: 78px;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.logo {
-    z-index: 9999;
-    width: 150px;
+    height: var(--navbar-height);
+    background: var(--bg-navbar);
+    backdrop-filter: var(--navbar-blur);
+    -webkit-backdrop-filter: var(--navbar-blur);
+    color: var(--text-green);
 }
 
 .navbar-nav {
     gap: 20px;
 }
 
+.navbar-brand img {
+    height: var(--navbar-height);
+    padding: 10px;
+}
+
 .nav-link {
-    color: #fff !important;
+    color: var(--text-green) !important;
+    font-weight: bold;
 }
 
 .nav-link.active {
-    background: linear-gradient(to right, #ff4500, #ffa500);
+    background: var(--gradient-orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.carousel-item img {
-    object-fit: cover;
-}
-
-.carousel-control-prev, .carousel-control-next {
-    display: none;
-}
-
-.green-section {
-    background-color: #d9f0e2;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 1rem;
-    background-color: #108c47;
-    transition: background-color 0.5s linear;
-}
-
-.cta-button:hover {
-    background: linear-gradient(to right, #ff4500, #ffa500);
-}
-
-.esg-icon {
-    font-size: 5rem;
-}
-
 @media (max-width: 991.98px) {
+    .navbar {
+        height: var(--navbar-mobile-height);
+    }
+
+    .navbar:has(.navbar-collapse.show) {
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom-color: transparent;
+    }
+
     .navbar-collapse {
         position: fixed;
         top: 0;
@@ -80,10 +111,13 @@ body {
         width: 100%;
         height: 0;
 
-        background-color: #000;
         padding-top: 70px;
         overflow: hidden;
         z-index: 9998;
+
+        background: var(--bg-navbar);
+        backdrop-filter: var(--navbar-blur);
+        -webkit-backdrop-filter: var(--navbar-blur);
 
         display: flex;
         flex-direction: column;
@@ -112,18 +146,28 @@ body {
         width: 100%;
         text-align: center;
         padding: 2rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        color: #fff !important;
+        border-bottom: 1px solid var(--text-green);
+        color: var(--text-green) !important;
+        font-weight: bold;
         transition: background 0.3s;
         font-size: 1.5rem;
+        letter-spacing: 5px;
     }
 
     .navbar-nav .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--bg-gray-transparent);
     }
 
     .navbar-toggler {
         position: relative;
         z-index: 9999;
+        border: none;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) var(--text-green);
     }
 }
+
+/* --- e.navbar --- */
