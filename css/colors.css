@@ -1,5 +1,6 @@
 :root {
     --bg-black: #000;
+    --bg-white: #fff;
     --bg-gray-transparent: rgba(255, 255, 255, 0.1);
     --bg-navbar: rgba(0, 255, 128, 0.15);
     --bg-card: #F1F5F2;

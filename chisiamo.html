@@ -1,839 +1,137 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi Siamo - Acciaierie Venete</title>
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <style>
-      body {
-        font-family: "Segoe UI", sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to right, #e0eafc, #cfdef3);
-        color: #2c3e50;
-      }
-
-      header {
-        background-color: #1b4332;
-        color: white;
-        padding: 2rem;
-        text-align: center;
-        height: 900px;
-      }
-
-      header h1 {
-        margin: 0;
-        font-size: 2rem;
-      }
-
-      .container {
-        max-width: 1000px;
-        margin: 3rem auto;
-        padding: 0 1rem;
-      }
-
-      .intro {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .intro h2 {
-        color: #2c6e49;
-        margin-bottom: 1rem;
-      }
-
-      .intro p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-
-      .values {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-        margin-top: 3rem;
-      }
-
-      .value-box {
-        background-color: #ffffff;
-        padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        flex: 1 1 280px;
-        max-width: 300px;
-        text-align: center;
-      }
-
-      .value-box h3 {
-        color: #1b4332;
-        margin-bottom: 0.5rem;
-      }
-
-      .value-box p {
-        font-size: 0.95rem;
-        color: #455a64;
-      }
-
-      /* Sezione Missione */
-
-      .dual-mission-section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        gap: 2rem;
-        background: linear-gradient(135deg, #f0fdf4, #e8f5e9);
-        border-radius: 13px;
-        margin: 2rem auto;
-        width: 1200px;
-        height: 600px;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
-        border: 3px solid #cdeac0;
-      }
-
-      .dual-left {
-        flex: 1 1 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .dual-left h2 {
-        font-size: 2rem;
-        color: #2d6a4f;
-        margin-bottom: 3rem;
-      }
-
-      .dual-left p {
-        font-size: 1.1rem;
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-      }
-
-      .icon-values {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
-        justify-items: center;
-      }
-
-      .icon-values li {
-        padding: 0.8rem 1rem;
-        font-size: 0.95rem;
-        width: 100%;
-      }
-
-      .icon-values li {
-        background-color: #f4f9f4;
-        padding: 0.4rem 0.6rem; /* Ridotto */
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-        color: #2d6a4f;
-        font-size: 1rem; /* Ridotto */
-        width: 95%; /* Più stretto */
-        text-align: center;
-        animation: fadeInUp 1s ease-out forwards;
-        opacity: 0;
-        transform: translateY(20px);
-        list-style: none;
-      }
-
-      .icon-values li:last-child {
-        width: 45%; /* o 60%, come preferisci */
-      }
-
-      .icon-values li span {
-        font-size: 1.8rem;
-        display: block;
-        margin-bottom: 0.4rem;
-      }
-
-      .icon-values li:nth-child(1) {
-        animation-delay: 0.2s;
-      }
-      .icon-values li:nth-child(2) {
-        animation-delay: 0.4s;
-      }
-
-      .icon-values li:last-child {
-        grid-column: span 2;
-        justify-self: center;
-
-        animation-delay: 0.6s;
-      }
-
-      .dual-right {
-        flex: 1 1 40%;
-        display: flex;
-        justify-content: center;
-      }
-
-      .mission-image {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      }
-
-      @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .dual-mission-section {
-          flex-direction: column;
-          padding: 1.5rem;
-        }
-        .icon-values {
-          grid-template-columns: 1fr;
-        }
-        .icon-values li:last-child {
-          width: 100%;
-          grid-column: span 1;
-        }
-      }
-
-      /* Video section */
-      .video-section {
-        margin: 4rem auto;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-
-      .video-section h2 {
-        color: #2c6e49;
-        margin-bottom: 3rem;
-        margin-top: -2rem;
-        font-size: 1.6rem;
-      }
-
-      .video-wrapper {
-        width: 800px;
-        margin: 0 auto;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .video-wrapper iframe {
-        width: 100%;
-        height: 450px;
-        border: none;
-      }
-
-      footer {
-        background-color: #1b4332;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.85rem;
-        margin-top: 4rem;
-      }
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .logo {
-          margin-bottom: 1rem;
-          justify-content: center;
-        }
-
-        .values {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .video-wrapper iframe {
-          height: 240px;
-        }
-      }
-
-      .gallery-section {
-        padding: 3rem 1rem;
-        background-image: url("pexels-pixabay-48895.jpg");
-        text-align: center;
-        width: 1900px;
-        margin-left: 50px;
-        margin-top: 25px;
-      }
-
-      .gallery-section h2 {
-        color: #2c6e49;
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-      }
-
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2.5rem;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      .gallery img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .gallery img:hover {
-        transform: scale(1.33);
-      }
-
-      footer {
-        background-color: #1b4332;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.85rem;
-        margin-top: 4rem;
-      }
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .logo {
-          margin-bottom: 1rem;
-          justify-content: center;
-        }
-
-        .values {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .gallery img {
-          height: 180px;
-        }
-      }
-
-      .dual-section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 4rem 2rem;
-        width: 1200px;
-        margin: 0 auto;
-        gap: 2rem;
-        border-radius: 18px;
-        padding: 3rem 2rem;
-        gap: 1rem;
-      }
-
-      .images-column {
-        flex: 1 1 400px;
-        display: flex;
-        flex-direction: column;
-        gap: 1.3rem;
-        margin-left: 60px;
-      }
-
-      .images-column img {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
-      }
-
-      .text-content {
-        flex: 1 1 400px;
-        max-width: 520px; /* ridotta da 600px a 500px */
-        padding: 1rem;
-      }
-
-      .text-content h2 {
-        color: #2c6e49;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        text-align: center;
-      }
-
-      .text-content p {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        color: #2f3e46;
-        text-align: center;
-      }
-
-      .icon-boxes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colonne */
-        gap: 1rem;
-        margin-top: 2.5rem;
-      }
-
-      .icon-box {
-        flex: 1 1 45%;
-        background: #ffffff;
-        border-radius: 10px;
-        padding: 0.6rem;
-        text-align: center;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-      }
-
-      .icon-box i {
-        font-size: 2.3rem; /* leggermente più piccola */
-        color: #2c6e49;
-        margin-bottom: 0.4rem;
-        height: 3.2rem;
-      }
-
-      .icon-box p {
-        font-size: 1rem; /* testo leggermente più compatto */
-        margin: 0;
-      }
-      .icon-box:hover {
-        transform: translateY(-4px);
-      }
-
-      .button-group {
-        margin-top: 1.5rem;
-        margin-left: 1.3rem;
-      }
-
-      .button-group a {
-        display: inline-block;
-        padding: 0.6rem 1.2rem;
-        background-color: #2c6e49;
-        color: white;
-        border-radius: 20px;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: background-color 0.3s ease;
-        margin-left: 180px;
-      }
-
-      .button-group a:hover {
-        background-color: #1b4332;
-      }
-
-      @media (max-width: 768px) {
-        .dual-section {
-          flex-direction: column;
-          padding: 2rem 1rem;
-        }
-
-        .text-content {
-          text-align: center;
-        }
-
-        .icon-boxes {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .button-group a {
-          margin-bottom: 0.8rem;
-        }
-      }
-
-      .team-values {
-        background: #f0fdf4;
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      .team-container {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-        height: 300px;
-      }
-
-      .team-values h2 {
-        margin-top: -25px;
-      }
-
-      .team-member {
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        width: 220px;
-      }
-
-      .team-member img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 10px;
-      }
-
-      .team-member h4 {
-        margin: 0.5rem 0 0.2rem;
-        color: #2d6a4f;
-      }
-
-      .team-member small {
-        display: block;
-        margin-top: 0.5rem;
-        font-style: italic;
-        color: #555;
-      }
-
-      .values-section {
-        background: linear-gradient(135deg, #e6f4ea, #d2e6d4);
-        padding: 2rem 1rem;
-        font-family: "Roboto", sans-serif;
-        width: 600px;
-        margin-left: 680px;
-        margin-top: 30px;
-      }
-
-      .values-container {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: #ffffffdd;
-        border-radius: 16px;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-        padding: 1.5rem;
-        animation: fadeIn 1.2s ease-out forwards;
-        text-align: center;
-      }
-
-      .values-container h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-        color: #2d6a4f;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem;
-      }
-
-      .values-list {
-        list-style: none;
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-
-      .values-list li {
-        background-color: #f4f9f4;
-        padding: 0.6rem 0.8rem;
-        border-radius: 10px;
-        font-size: 0.9rem;
-        color: #2d6a4f;
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-        text-align: center;
-      }
-
-      @media (max-width: 600px) {
-        .values-list {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      footer {
-        background-color: #1b4332;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.85rem;
-        margin-top: 4rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Chi Siamo</h1>
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo principale della pagina / nome dell'azienda -->
+    <title>Acciaierie Venete - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chisiamo.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- NavBar della pagina -->
+<header>
+    <nav class="navbar navbar-expand-lg">
         <div class="container-lg">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="img/logo.png" alt="Logo" class="logo me-2" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto text-center">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="sostenibilita.html"
-                  >Sostenibilità</a
-                >
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <!-- Logo dependable: immagine rappresentativa posizionata nella parte superiore della pagina -->
+                <img src="img/logo.png" alt="Logo" class="logo me-2">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="chisiamo.html">Chi siamo</a>
+                    <li class="nav-item"><a class="nav-link " href="sostenibilita.html">Sostenibilità</a>
+                    <li class="nav-item"><a class="nav-link " href="contatti.html">Contatti</a>
+                </ul>
+            </div>
         </div>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <div class="container">
-      <div class="intro">
-        <h2>Acciaierie Venete</h2>
-        <p>
-          Siamo un gruppo industriale italiano specializzato nella produzione di
-          acciai di alta qualità. Da generazioni, mettiamo passione, innovazione
-          e sostenibilità al servizio dell’industria meccanica, automobilistica
-          e delle costruzioni.
-        </p>
-      </div>
+<main>
+    <section id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
 
-      <div class="values">
-        <div class="value-box">
-          <h3>Esperienza</h3>
-          <p>
-            Con oltre 70 anni di storia, siamo un punto di riferimento nel
-            settore siderurgico italiano ed europeo.
-          </p>
+            <div class="carousel-item active">
+                <img src="./img/carousel_1.avif" class="d-block w-100" alt="Logo azienda">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carousel_2.jpg" class="d-block w-100"
+                     alt="ecnici siderurgici che ispezionano rotoli di acciaio in stabilimento">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carousel_3.jpg" class="d-block w-100" alt="Tubi d’acciaio">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carousel_4.jpg" class="d-block w-100"
+                     alt="Operai al lavoro durante la colata di acciaio fuso">
+            </div>
         </div>
-        <div class="value-box">
-          <h3>Qualità</h3>
-          <p>
-            Ogni prodotto è frutto di un processo accurato, controllato e
-            certificato secondo i più alti standard.
-          </p>
-        </div>
-        <div class="value-box">
-          <h3>Sostenibilità</h3>
-          <p>
-            Promuoviamo l’uso efficiente delle risorse e investiamo in
-            tecnologie a basso impatto ambientale.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Missione 
-<section class="dual-mission-section">
-  <div class="dual-left">
-    <img src="pexels-loic-manegarium-3855962.jpg" width="500px" height="500px"/>
-  </div>
-
-  <div class="dual-right">
-    <h2>La Nostra Missione</h2>
-    <p>
-      La nostra missione è produrre acciaio responsabile e di alta qualità, valorizzando il capitale umano, 
-      riducendo l’impatto ambientale e investendo continuamente nell’innovazione. Crediamo in un futuro industriale 
-      che rispetti le persone, l’ambiente e la crescita sostenibile.
-    </p>
-
-    <div class="icon-values">
-      <div class="icon-item">
-        <i class="fas fa-leaf"></i>
-        <span>Sostenibilità</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-bolt"></i>
-        <span>Innovazione</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-users"></i>
-        <span>Collaborazione</span>
-      </div>
-      <div class="icon-item">
-        <i class="fas fa-globe-europe"></i>
-        <span>Responsabilità Globale</span>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-    <section class="dual-mission-section">
-      <div class="dual-left">
-        <h2>La Nostra Missione</h2>
-        <p>
-          La nostra missione è produrre acciaio responsabile e di alta qualità,
-          valorizzando il capitale umano, riducendo l’impatto ambientale e
-          investendo continuamente nell’innovazione. Crediamo in un futuro
-          industriale che rispetti le persone, l’ambiente e la crescita
-          sostenibile.
-        </p>
-
-        <ul class="icon-values">
-          <li>
-            <span>🌱</span>Promuovere processi produttivi a basso impatto
-            ambientale
-          </li>
-          <li>
-            <span>⚙️</span>Investire in tecnologie per un futuro sostenibile
-          </li>
-          <li>
-            <span>🤝</span>Collaborare in modo etico con il territorio e la
-            comunità
-          </li>
-        </ul>
-      </div>
-
-      <div class="dual-right">
-        <img
-          src="pexels-loic-manegarium-3855962.jpg"
-          width="500px"
-          height="500px"
-        />
-      </div>
     </section>
 
-    <!-- Video -->
-    <div class="video-section">
-      <h2>Scopri il Nostro Impegno per l’Ambiente</h2>
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/5MgBikgcWnY"
-          title="Video aziendale sostenibilità"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+    <section class="container">
+        <div class="introduction-container pt-5 pb-3">
+            <h1 class="acc-big-title acc-text-green">
+                ACCIAIERIE VENETE
+            </h1>
+            <p class="lead mt-4 text-center pt-3 px-md-5">
+                Acciaierie Venete è un gruppo industriale italiano specializzato nella produzione di acciai di alta
+                qualità.
+                Con oltre 70 anni di esperienza, rappresentiamo un punto di riferimento nel settore siderurgico italiano
+                ed europeo.
+                Ogni nostro prodotto nasce da processi accurati, controllati e certificati secondo i più alti standard,
+                a garanzia di
+                affidabilità e performance. Da sempre mettiamo passione, innovazione e sostenibilità al servizio
+                dell’industria meccanica,
+                automobilistica e delle costruzioni, promuovendo l’uso efficiente delle risorse e investendo in
+                tecnologie a basso impatto
+                ambientale.
+            </p>
+        </div>
 
-    <section class="team-values">
-      <h2><i class="fas fa-users"></i> Il Nostro Team</h2>
-      <div class="team-container">
-        <div class="team-member">
-          <img src="desck.jpg" alt="Team Member" />
-          <h4>Anna Verdi</h4>
-          <p>Responsabile Ambiente</p>
-          <small>"Ogni scelta è un passo verso il futuro."</small>
+        <!-- RECAP -->
+        <div class="row py-4 p-3 justify-content-center">
+            <div class="mission-card col-12 col-md-10 acc-card p-3 d-flex flex-wrap align-items-stretch">
+
+                <!-- Testo -->
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center p-3 text-center">
+                    <h3 class="acc-highlight mb-4">La Nostra Missione</h3>
+                    <p class="mb-4">
+                        La nostra missione è produrre acciaio responsabile e di alta qualità, valorizzando il capitale
+                        umano,
+                        riducendo l’impatto ambientale e investendo continuamente nell’innovazione.
+
+                        <!-- Mini Card -->
+                    <div class="row g-3 justify-content-between">
+                        <div class="col-12 col-sm-6">
+                            <div class="mini-card text-center p-3 shadow-sm h-100">
+                                <span class="emoji">🌱</span>
+                                <p class="mb-0 mt-2">Promuovere processi produttivi a basso impatto ambientale</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="mini-card text-center p-3 shadow-sm h-100">
+                                <span class="emoji">⚙️</span>
+
+                                <p class="mb-0 mt-2">Investire in tecnologie per un futuro sostenibile</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mini-card text-center p-3 shadow-sm" h-100>
+                                <span class="emoji">🤝</span>
+                                <p class="mb-0 mt-2">Collaborare in modo etico con il territorio e la comunità</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Immagine -->
+                <div class="col-12 col-lg-6 p-3">
+                    <div class="square-container">
+                        <img
+                                src="./img/chi_siamo_acc.jpg"
+                                alt="Impianto siderurgico con ciminiere e strutture industriali"
+                                class="img-fluid rounded shadow square-img"/>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/120" alt="Team Member" />
-          <h4>Luca Bianchi</h4>
-          <p>CEO</p>
-          <small>"Innovare senza dimenticare il pianeta."</small>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/120" alt="Team Member" />
-          <h4>Chiara Rossi</h4>
-          <p>Comunicazione</p>
-          <small>"Trasmettere valore con chiarezza e passione."</small>
-        </div>
-      </div>
+
     </section>
 
-    <section class="dual-section">
-      <div class="images-column">
-        <img
-          src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
-          alt="Ambiente 1"
-        />
-        <img src="desck.jpg" />
-      </div>
 
-      <div class="text-content">
-        <h2>Innovazione e Responsabilità</h2>
-        <p>
-          Da oltre 70 anni, Acciaierie Venete si impegna a innovare nel rispetto
-          dell’ambiente e della società.
-        </p>
-        <p>
-          Utilizziamo tecnologie avanzate per ridurre l’impatto ambientale e
-          promuoviamo una produzione sostenibile.
-        </p>
-        <p>
-          Collaboriamo con istituzioni accademiche per la ricerca e lo sviluppo
-          di soluzioni ecocompatibili.
-        </p>
+</main>
 
-        <div class="icon-boxes">
-          <div class="icon-box">
-            <i class="fas fa-leaf"></i>
-            <p>Produzione a basso impatto</p>
-          </div>
-          <div class="icon-box">
-            <i class="fas fa-recycle"></i>
-            <p>Riciclo dei materiali</p>
-          </div>
-          <div class="icon-box">
-            <i class="fas fa-bolt"></i>
-            <p>Energia rinnovabile</p>
-          </div>
-          <div class="icon-box">
-            <i class="fas fa-people-group"></i>
-            <p>Etica del lavoro</p>
-          </div>
-        </div>
-
-        <div class="button-group">
-          <a href="#">Scopri di più</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Galleria Immagini -->
-    <div class="gallery-section">
-      <h2>La Nostra Visione</h2>
-      <div class="gallery">
-        <img src="opera.jpg" />
-        <img src="pexels-kateryna-babaieva-1423213-3736110.jpg" />
-        <img src="pexels-bence-szemerey-337043-6804265.jpg" />
-        <img src="pexels-loic-manegarium-3855962.jpg" />
-        <img src="acciaierie_venete.jpg" />
-        <img src="pexels-brittney-witherby-294201077-17748074.jpg" />
-      </div>
-    </div>
-
-    <!--
-  <div class="values-section">
-    <h3><i class="fas fa-seedling"></i> I Nostri Valori</h3>
-    <ul class="values-list">
-      <li>🌿 Sostenibilità a lungo termine</li>
-      <li>💡 Innovazione continua</li>
-      <li>🤝 Etica e trasparenza</li>
-      <li>📈 Crescita condivisa</li>
-      <li>🛠 Qualità dei processi</li>
-    </ul>
-  </div>
-  -->
-
-    <footer>&copy; 2025 Acciaierie Venete - Tutti i diritti riservati</footer>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
-
-
-

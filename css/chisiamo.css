@@ -1,125 +1,44 @@
+#carouselExampleSlidesOnly .carousel-item {
+    height: 700px;
+}
 
-.jumbo-container {
-    background-image: url("../img/jambo.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(226, 232, 230);
-    text-transform: uppercase;
+#carouselExampleSlidesOnly .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 
-h5, h4 {
-
-    font-weight: bold;
-
-}
-
-h4 {
-
-    color: grey;
-
+.square-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    height: 100%;
 }
 
 
-.report-container.p {
-    color: red;
+.square-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-
-.card {
-    flex-grow: 1;
-    max-width: 1300px;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition-duration: 0.2s;
-}
-
-.card-img {
-
-    max-height: 800px;
-    object-fit: contain;
-}
-
-
-.chi-siamo {
-    background-image: url('jambo.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white; /* Per contrasto con lo sfondo scuro */
-}
-
-
-.report-section {
-    background-color: #287f42;
-    padding: 3rem 1rem;
-    color: #2e3d27;
-    margin-top: -5rem;
-}
-
-.report-container {
-    max-width: 800px;
-    margin: 0 auto;
-
-}
-
-.chi-siamo.report-container h2 {
-    font-size: 2rem;
-    color: #159749;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.report-container p {
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-
-header {
-    background-color: #108c47;
-    color: rgb(255, 255, 255);
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
-}
-
-.chi-siamo.report-container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #2a9c57;
+.mini-card {
+    background: var(--bg-white);
     border-radius: 10px;
-    text-align: center;
-}
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.95rem;
 
-.chi-siamo h2 {
-    color: #1f5133;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
+    .emoji {
+        font-size: 2rem;
+        display: block;
+    }
 
-.chi-siamo p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    text-align: justify;
-}
-
-.chi-siamo img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin: 1.5rem 0;
 }
