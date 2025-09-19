@@ -11,11 +11,6 @@
   color: var(--text-green);
 }
 
-h5,
-h4 {
-  font-weight: bold;
-}
-
 /* Posizionamenoto video */
 .video-jumbo {
   position: relative;

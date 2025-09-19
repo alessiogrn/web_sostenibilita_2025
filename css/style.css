@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.acc-text-green {
+    color: var(--text-green);
+}
+
 .acc-card {
     border-radius: 14px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -21,24 +25,24 @@
     transform: translateY(-10px);
 }
 
-.cta-section {
+.acc-section {
     background-color: var(--bg-light-green);
     text-align: center;
 }
 
-.cta-section h2 {
+.acc-section h2 {
     font-size: 1.8rem;
     margin-bottom: 2.5rem;
     font-weight: bold;
 
     background: linear-gradient(to right, #ff4500, #ffa500);
-    -webkit-background-clip: text;   /* necessario per Safari/Chrome */
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;           /* per gli altri browser */
+    background-clip: text;
     color: transparent;
 }
 
-.cta-section p {
+.acc-section p {
     font-size: 1.07rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -47,7 +51,7 @@
 .acc-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #108c47;
+    background-color: var(--bg-btn-green);
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -132,9 +136,9 @@
 
     .navbar-collapse.show {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-80px);
         pointer-events: auto;
-        height: 100vh;
+        height: calc(100vh + 80px);
     }
 
     .navbar-nav {

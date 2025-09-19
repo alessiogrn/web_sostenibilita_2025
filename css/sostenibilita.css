@@ -1,5 +1,4 @@
 
-/* Immagine rappresentativa della pagina */
 .jumbo-container {
     background-image: url("../img/jumbo_sostenibilita.jpg");
     background-size: cover;
@@ -8,57 +7,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(226, 232, 230);
+    color: var(--text-light-grey);
     text-transform: uppercase;
-}
-
-h1{
-    font-weight: bold;
-}
-
-h5, h4{
-
-    font-weight:bold;
-
-}
-
-.report-section {
-  background-color: #eef8f1;
-  padding: 3rem 1rem;
-  color: #2e3d27;
-  margin-top: -5rem;
-}
-
-.report-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.report-container h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #1f5133;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.report-container p {
-  font-size: 1.05rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* Sezione dove vengono riportati i report */
-.card {
-    flex-grow: 1;
-    max-width: 300px;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition-duration: 0.2s;
 }
 
 .card-img {
