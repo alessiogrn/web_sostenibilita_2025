@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titolo principale della pagina / nome dell'azienda -->
+    <!-- Nome dell'azienda - titolo pagina -->
     <title>Acciaierie Venete - Home</title>
+    <!-- Bootstrap 5: framework CSS per layout/responsive -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome: set di icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Palette colori condivisa del progetto -->
     <link rel="stylesheet" href="css/colors.css">
+    <!-- Stili globali del sito -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Stili specifici della Home -->
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
 <!-- NavBar della pagina -->
 <header>
+    <!-- Navbar responsive: collassa su mobile -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-lg">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <!-- Logo dependable: immagine rappresentativa posizionata nella parte superiore della pagina -->
+                <!-- Logo: immagine rappresentativa posizionata nella parte superiore della pagina -->
                 <img src="img/logo.png" alt="Logo" class="logo me-2">
             </a>
 
@@ -42,6 +48,7 @@
 <!-- Sezione Home: Video -->
 <main class="flex-grow-1">
     <section class="video-jumbo">
+        <!-- Video di background: autoplay, muted, loop per evitare blocchi su mobile -->
         <video autoplay muted loop playsinline class="video-background">
             <source src="img/intro_home.mp4" type="video/mp4">
             Il tuo browser non supporta il tag video.
@@ -73,7 +80,8 @@
                 </h3>
                 <p>
                     Acciaierie Venete produce circa 2 milioni di tonnellate di acciaio all'anno in diversi
-                    stabilimenti in Italia. I suoi prodotti sono destinati ai settori automotive, energia, meccanica e costruzioni.
+                    stabilimenti in Italia. I suoi prodotti sono destinati ai settori automotive, energia, meccanica e
+                    costruzioni.
                 </p>
             </div>
 
@@ -91,6 +99,7 @@
     </div>
 
     <!-- INDIRIZZAMENTO REPORT-->
+    <!-- Call-to-Action: invito a esplorare i contenuti sulla sostenibilità -->
     <section class="acc-section my-5 py-5 px-3">
         <h2 class="acc-small-highlight mb-4">Vuoi saperne di più?</h2>
         <p>Scopri le nostre iniziative legate alla sostenibilità aziendale.</p>
@@ -101,7 +110,7 @@
     </section>
 
     <div class="container">
-        <section class="row py-5">
+        <section class="row py-5 justify-content-center">
             <h2 class="acc-small-highlight acc-text-green text-center mb-3">
                 I Nostri Valori
             </h2>

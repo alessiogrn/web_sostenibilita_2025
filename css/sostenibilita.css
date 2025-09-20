@@ -1,4 +1,4 @@
-
+/* Hero sostenibilità: immagine di sfondo con testo centrato */
 .jumbo-container {
     background-image: url("../img/jumbo_sostenibilita.jpg");
     background-size: cover;
@@ -11,6 +11,7 @@
     text-transform: uppercase;
 }
 
+/* Immagini nelle card: altezza massima e contenute */
 .card-img {
     max-height: 200px;
     object-fit: contain;

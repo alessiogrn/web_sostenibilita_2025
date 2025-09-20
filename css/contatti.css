@@ -1,3 +1,4 @@
+/* Hero contatti: immagine di sfondo con testo centrato */
 .jumbo-container {
     background-image: url("../img/contatti.png");
     background-size: cover;
@@ -10,22 +11,26 @@
     color: var(--text-light-dark);
 }
 
+/* Mini card con bordo verde e effetto hover */
 .minicard {
     border: 1px solid var(--border-green-card);
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
 
+/* Icona dentro minicard: verde con animazione bounce */
 .minicard i {
     color: var(--text-green);
     animation: bounce 1.8s infinite;
 }
 
+/* Testo della minicard con sfondo verde chiaro arrotondato */
 .minicard p {
     background-color: var(--bg-light-green);
     border-radius: 14px;
 }
 
+/* Animazione bounce: leggera oscillazione verticale */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);

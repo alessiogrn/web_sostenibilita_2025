@@ -1,7 +1,10 @@
+
+/* Item del carosello principale: imposta altezza fissa per ogni slide */
 #carouselExampleSlidesOnly .carousel-item {
     height: 600px;
 }
 
+/* Immagini dentro il carosello: occupano tutta l'altezza e restano centrate */
 #carouselExampleSlidesOnly .carousel-item img {
     height: 100%;
     object-fit: cover;
@@ -9,6 +12,7 @@
 }
 
 
+/* Contenitore quadrato responsive: mantiene proporzioni 1:1 tramite padding */
 .square-container {
     position: relative;
     width: 100%;
@@ -18,6 +22,7 @@
 }
 
 
+/* Immagini dentro square-container */
 .square-container img {
     position: absolute;
     top: 0;
@@ -27,6 +32,7 @@
     object-fit: cover;
 }
 
+/* Mini-card: piccoli box con sfondo bianco e ombra */
 .mini-card {
     background: var(--bg-white);
     border-radius: 10px;
@@ -40,11 +46,12 @@
 }
 
 /* --- Team cards --- */
+/* Card del Team: box individuale per ogni membro */
 .team-card {
     border-radius: 16px;
     padding: 24px;
 }
-
+/* Avatar del membro del team: immagine rotonda centrata, con ombra per evidenziarla */
 .team-avatar {
     width: 140px;
     height: 140px;
@@ -55,6 +62,7 @@
     box-shadow: 0 4px 14px rgba(0,0,0,.08);
 }
 
+/* Ruolo del membro del team */
 .team-role {
     color: var(--text-brown);
     opacity: .85;
@@ -62,12 +70,14 @@
     font-size: medium !important;
 }
 
+/* Citazione personale */
 .team-quote {
     font-style: italic;
     color: var(--text-light-dark);
     line-height: 1.5;
 }
 
+/* Icona IR: box quadrato con angoli arrotondati, centrata con flex */
 .ir-icon {
     width: 48px;
     height: 48px;
@@ -78,10 +88,12 @@
     font-size: 1.5rem;
 }
 
+/* Contenitore immagini innovazione */
 .innovazione-images {
     max-width: 520px;
 }
 
+/* Immagini innovazione */
 .innovazione-images img {
     width: 100%;
     height: 240px;
