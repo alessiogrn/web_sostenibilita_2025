@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titolo principale della pagina / nome dell'azienda -->
     <title>Acciaierie Venete - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chisiamo.css">
@@ -85,7 +85,7 @@
 
 
                 <div class="col-12 col-lg-6 d-flex flex-column justify-content-center p-3 text-center">
-                    <h3 class="acc-highlight mb-4">La Nostra Missione</h3>
+                    <h3 class="acc-highlight mb-4 acc-text-green">La Nostra Missione</h3>
                     <p class="mb-4">
                         La nostra missione è produrre acciaio responsabile e di alta qualità, valorizzando il capitale
                         umano,
@@ -95,20 +95,19 @@
                     <div class="row g-3 justify-content-between">
                         <div class="col-12 col-sm-6">
                             <div class="mini-card text-center p-3 shadow-sm h-100">
-                                <span class="emoji">🌱</span>
+                                <span class="ir-icon acc-text-green fs-2"><i class="fas fa-leaf"></i></span>
                                 <p class="mb-0 mt-2">Promuovere processi produttivi a basso impatto ambientale</p>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="mini-card text-center p-3 shadow-sm h-100">
-                                <span class="emoji">⚙️</span>
-
+                                <span class="ir-icon acc-text-green fs-2"><i class="fas fa-cogs"></i></span>
                                 <p class="mb-0 mt-2">Investire in tecnologie per un futuro sostenibile</p>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="mini-card text-center p-3 shadow-sm" h-100>
-                                <span class="emoji">🤝</span>
+                                <span class="ir-icon acc-text-green fs-2"><i class="fas fa-handshake"></i></span>
                                 <p class="mb-0 mt-2">Collaborare in modo etico con il territorio e la comunità</p>
                             </div>
                         </div>
@@ -165,10 +164,58 @@
     </section>
 
     <!-- Innovazione e responsabilità -->
-    <section class="container">
+    <section class="container pb-5">
+        <div class="row g-5 align-items-center">
+            <!-- Colonna immagini (nascoste su mobile) -->
+            <div class="col-md-5 d-none d-lg-block">
+                <div class="innovazione-images mx-auto">
+                    <img src="img/innovation_1.jpg" class="img-fluid rounded-4 shadow-sm mb-4"
+                         alt="Operaio che salda metallo">
+                    <img src="img/innovation_2.webp" class="img-fluid rounded-4 shadow-sm"
+                         alt="Barre d’acciaio incandescenti su rulli">
+                </div>
+            </div>
 
+            <!-- Colonna contenuti -->
+            <div class="col-lg-7">
+                <h3 class="acc-highlight mb-4 acc-text-green text-center">Innovazione e Responsabilità</h3>
+                <p class="lead text-center my-5">
+                    Da oltre 70 anni, Acciaierie Venete si impegna a innovare nel rispetto dell’ambiente e della
+                    società. Utilizziamo tecnologie avanzate per ridurre l’impatto ambientale e promuoviamo una produzione
+                    Collaboriamo con istituzioni accademiche per la ricerca e lo sviluppo di soluzioni ecocompatibili.
+                    sostenibile.
+                </p>
+
+                <!-- Card icone 2x2 -->
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6">
+                        <div class="acc-card h-100 p-3 d-flex align-items-center gap-3">
+                            <span class="ir-icon acc-text-green"><i class="fas fa-earth-europe"></i></span>
+                            <div class="fw-medium">Produzione a basso impatto</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="acc-card h-100 p-3 d-flex align-items-center gap-3">
+                            <span class="ir-icon acc-text-green"><i class="fas fa-recycle"></i></span>
+                            <div class="fw-medium">Riciclo dei materiali</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="acc-card h-100 p-3 d-flex align-items-center gap-3">
+                            <span class="ir-icon acc-text-green"><i class="fas fa-bolt"></i></span>
+                            <div class="fw-medium">Energia rinnovabile</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="acc-card h-100 p-3 d-flex align-items-center gap-3">
+                            <span class="ir-icon acc-text-green"><i class="fas fa-people-group"></i></span>
+                            <div class="fw-medium">Etica del lavoro</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
