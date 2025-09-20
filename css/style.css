@@ -39,6 +39,7 @@
 
 .card-moving:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.06);
 }
 
 .acc-section {

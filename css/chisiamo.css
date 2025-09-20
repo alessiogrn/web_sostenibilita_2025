@@ -1,5 +1,5 @@
 #carouselExampleSlidesOnly .carousel-item {
-    height: 700px;
+    height: 600px;
 }
 
 #carouselExampleSlidesOnly .carousel-item img {
@@ -35,10 +35,41 @@
     flex-direction: column;
     justify-content: center;
     font-size: 0.95rem;
-
-    .emoji {
-        font-size: 2rem;
-        display: block;
-    }
-
 }
+
+.mini-card .emoji {
+    font-size: 2rem;
+    display: block;
+}
+
+/* --- Team cards --- */
+.team-card {
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.team-avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+
+.team-role {
+    color: var(--text-brown);
+    opacity: .85;
+    font-weight: 500;
+    font-size: medium !important;
+}
+
+.team-quote {
+    font-style: italic;
+    color: var(--text-light-dark);
+    line-height: 1.5;
+}
+
+
+
