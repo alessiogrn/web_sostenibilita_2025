@@ -1,0 +1,36 @@
+.jumbo-container {
+    background-image: url("../img/contatti.png");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--text-light-dark);
+}
+
+.minicard {
+    border: 1px solid var(--border-green-card);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.minicard i {
+    color: var(--text-green);
+    animation: bounce 1.8s infinite;
+}
+
+.minicard p {
+    background-color: var(--bg-light-green);
+    border-radius: 14px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
