@@ -105,12 +105,22 @@
 .nav-link {
     color: var(--text-green) !important;
     font-weight: bold;
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+    border-radius: 0 14px;
+    padding: 5px;
+    transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-white)!important;
+    border-radius: 14px 0;
+    background: var(--gradient-orange-transparent);
 }
 
 .nav-link.active {
-    background: var(--gradient-orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-white)!important;
+    border-radius: 14px 0;
+    background: var(--gradient-orange-transparent);
 }
 
 @media (max-width: 991.98px) {
@@ -167,16 +177,17 @@
         width: 100%;
         text-align: center;
         padding: 2rem 0;
-        border-bottom: 1px solid var(--text-green);
-        color: var(--text-green) !important;
         font-weight: bold;
-        transition: background 0.3s;
         font-size: 1.5rem;
         letter-spacing: 5px;
     }
 
-    .navbar-nav .nav-link:hover {
-        background-color: var(--bg-gray-transparent);
+    .nav-link {
+        border-radius: 0 0 14px 0;
+    }
+
+    .nav-link:hover {
+        border-radius: 0 0 14px 0;
     }
 
     .navbar-toggler {
