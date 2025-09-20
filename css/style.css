@@ -80,6 +80,24 @@
     background-color: #0a6d35;
 }
 
+footer {
+    background-color: var(--bg-light-green);
+    color: var(--text-green);
+    border-top: 2px solid var(--text-green);
+    font-size: 0.8rem;
+}
+
+footer hr {
+    border: none;
+    height: 1px;
+    width: 80%;
+    background: linear-gradient(90deg, transparent, var(--text-green), transparent);
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
 
 /* --- s.navbar --- */
 .navbar {
